@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Marketing portfolio of Pham Thi My Duyen (Mely): Meta Ads, SEO, email marketing and creative projects.">
+<style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style>
+<title>Mely Marketing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Pinyon+Script&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: UGC-style scrapbook — framed paper sheets on a warm ground, condensed display + script overlay, colored folders as section tabs */
+:root{
+  --ground:#efe7da; --paper:#fbf7f0; --ink:#17140f; --muted:#5d564b; --line:#d9cfbf;
+  --pink:#f2a7bf; --orange:#f6a35b; --blue:#a9c7ef; --green:#bfe08a; --chip:#e4eefb;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --script:"Pinyon Script","Brush Script MT",cursive;
+  --body:"Manrope","Segoe UI",system-ui,sans-serif;
+  --shadow:0 18px 40px -22px rgba(40,30,10,.45);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ground:#16130f; --paper:#221e18; --ink:#f4ede1; --muted:#b4aa99; --line:#3a332a;
+  --pink:#d98aa4; --orange:#e08e47; --blue:#7fa3d6; --green:#9cc463; --chip:#2b3442;
+  --shadow:0 18px 40px -22px rgba(0,0,0,.8); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ground:#16130f; --paper:#221e18; --ink:#f4ede1; --muted:#b4aa99; --line:#3a332a;
+  --pink:#d98aa4; --orange:#e08e47; --blue:#7fa3d6; --green:#9cc463; --chip:#2b3442;
+  --shadow:0 18px 40px -22px rgba(0,0,0,.8); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+.wrap{max-width:1080px;margin:0 auto;display:grid;gap:22px}
+.sheet{background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);padding:clamp(20px,4vw,44px)}
+h1,h2,h3{text-wrap:balance;margin:0}
+.display{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line-height:.92;font-weight:400}
+.script{font-family:var(--script);font-weight:400;line-height:1}
+.label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* nav */
+nav{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:space-between;padding-bottom:22px;border-bottom:1px solid var(--line)}
+nav .links{display:flex;flex-wrap:wrap;gap:6px 22px}
+nav a{text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding-top:34px}
+.hero-title{position:relative;padding-top:clamp(28px,5vw,46px)}
+.hero-title .script{position:absolute;top:0;left:-4px;font-size:clamp(54px,9vw,96px);z-index:1;transform:rotate(-6deg)}
+.hero-title .display{font-size:clamp(68px,13vw,148px);position:relative}
+.hero p.lede{max-width:46ch;margin-top:18px;color:var(--muted);font-size:16px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--chip);border-left:3px solid var(--ink);border-right:3px solid var(--ink)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.meta-line{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:13px;color:var(--muted)}
+
+/* portrait + folders */
+.portrait{position:relative;aspect-ratio:1/1.05;max-width:100%;width:min(380px,100%);justify-self:center}
+.photo{position:absolute;inset:12% 14%;background:var(--blue);display:grid;place-items:center;overflow:hidden}
+.photo .mono{font-family:var(--display);font-size:clamp(70px,12vw,120px);color:var(--paper);letter-spacing:.02em}
+.photo .stripe{position:absolute;inset:auto 0 0 0;height:36%;background:var(--orange);clip-path:polygon(0 30%,100% 0,100% 100%,0 100%)}
+.photo .mono{position:relative;z-index:1}
+.folder{position:absolute;width:26%;aspect-ratio:1.25;display:flex;flex-direction:column;align-items:center;gap:4px;z-index:2}
+.folder svg{width:100%;height:auto;filter:drop-shadow(0 6px 8px rgba(0,0,0,.14))}
+.folder span{font-size:10px;font-weight:700;color:var(--ink);background:var(--paper);padding:0 4px}
+.f1{top:0;left:2%}.f2{top:6%;right:0}.f3{bottom:18%;left:-2%}.f4{bottom:10%;right:-2%}
+.nameplate{position:absolute;bottom:0;left:0;right:0;text-align:center;font-weight:800;letter-spacing:.12em;font-size:13px}
+
+/* about + services */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.about{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:start}
+.about .tile{aspect-ratio:3/4;background:var(--pink);position:relative;overflow:hidden}
+.about .tile::before{content:"";position:absolute;inset:auto -20% -10% -20%;height:55%;background:var(--green);border-radius:50% 50% 0 0}
+.about .tile::after{content:"Bình Phước → HCMC → Kuala Lumpur";position:absolute;left:10px;right:10px;top:12px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.about h2{font-size:clamp(40px,5vw,54px)}
+.about p+p{margin-top:12px}
+.about strong{font-weight:800}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;background:var(--ink);padding:10px 12px}
+.badges span{color:var(--paper);font-size:11px;font-weight:700;letter-spacing:.06em}
+
+.sec-title{font-size:clamp(34px,5vw,52px);margin-bottom:22px}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.svc article{border:1px solid var(--line);padding:14px;display:grid;gap:8px;align-content:start;min-width:0}
+.svc .ico{height:58px;display:grid;place-items:center;border:1px solid var(--line)}
+.svc h3{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.svc p{font-size:12.5px;color:var(--muted);line-height:1.5}
+
+/* case studies */
+.cases{display:grid;gap:22px}
+.case{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+.case + .case{border-top:1px dashed var(--line);padding-top:26px}
+.pill{display:inline-block;border:1.5px solid var(--ink);background:var(--chip);padding:2px 12px;border-radius:999px;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.case-head{position:relative;padding-top:30px}
+.case-head .script{position:absolute;top:0;left:0;font-size:46px;transform:rotate(-4deg)}
+.case-head .display{font-size:clamp(40px,6vw,62px)}
+.case-head .client{font-weight:800;font-size:15px;margin-top:6px;letter-spacing:.04em;text-transform:uppercase}
+.case-head .tags{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.board div{aspect-ratio:1;border:1px solid var(--line);display:grid;place-items:center;font-family:var(--display);font-size:clamp(16px,2.6vw,24px);text-align:center;padding:6px;line-height:1}
+.c-pink{background:var(--pink)}.c-orange{background:var(--orange)}.c-blue{background:var(--blue)}.c-green{background:var(--green)}.c-paper{background:var(--paper)}
+.cbody{display:grid;gap:14px;min-width:0}
+.cbody h4{margin:0 0 4px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.cbody p,.cbody li{font-size:14px;color:var(--muted)}
+.cbody ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.steps div{border:1.5px solid var(--ink);padding:8px 6px;text-align:center;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.result{display:flex;flex-wrap:wrap;gap:10px}
+.result div{flex:1 1 120px;border:1.5px solid var(--ink);border-radius:999px;background:var(--chip);padding:6px 14px;text-align:center}
+.result b{display:block;font-family:var(--display);font-size:22px;font-weight:400;line-height:1.1;font-variant-numeric:tabular-nums}
+.result small{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* performance */
+.perf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.panel{border:1px solid var(--line);min-width:0}
+.panel>.ph{background:var(--ink);color:var(--paper);font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;text-align:center}
+.panel>.pb{padding:16px}
+.stat b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(38px,5vw,52px);line-height:1;font-variant-numeric:tabular-nums}
+.stat p{font-size:12.5px;color:var(--muted);margin-top:6px}
+.wide{grid-column:span 4}
+.chart-box{overflow-x:auto}
+.chart-box svg{width:100%;min-width:520px;height:auto;display:block}
+.chart-note{font-size:12px;color:var(--muted);margin-top:10px}
+
+/* experience + toolkit */
+.timeline{display:grid;gap:0}
+.job{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-top:1px solid var(--line)}
+.job:first-child{border-top:0;padding-top:0}
+.job .when{font-size:12px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.job h3{font-size:16px;font-weight:800}
+.job .where{font-size:13px;color:var(--muted);margin-bottom:6px}
+.job ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:3px}
+.tk{display:grid;gap:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1.5px solid var(--ink);padding:4px 12px;font-size:12px;font-weight:700}
+.chips.soft span{border-color:var(--line);background:var(--chip)}
+.list{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.list li{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:14px;align-items:start}
+.list li::before{content:"";width:10px;height:10px;margin-top:6px;background:var(--orange)}
+.list li:nth-child(2n)::before{background:var(--blue)}
+.list li:nth-child(3n)::before{background:var(--green)}
+
+/* AI tools */
+.ai{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ai div{border:1.5px solid var(--ink);padding:10px 12px;background:var(--chip);min-width:0}
+.ai b{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.02em}
+.ai p{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:2px}
+
+/* creative projects */
+.cp-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:10px 24px;margin-bottom:22px}
+.cp-head .sec-title{margin-bottom:0}
+.cp-head p{max-width:44ch;color:var(--muted);font-size:14px}
+.cp{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.proj{border:1px solid var(--line);display:grid;grid-template-rows:auto 1fr;min-width:0;grid-column:span 2}
+.proj.big{grid-column:span 3}
+.proj .vis{aspect-ratio:16/10;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.proj .txt{padding:14px 16px;display:grid;gap:6px;align-content:start}
+.proj .kind{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.proj h3{font-family:var(--display);font-weight:400;font-size:26px;text-transform:uppercase;line-height:1}
+.proj p{font-size:13.5px;color:var(--muted)}
+.proj .roles{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.proj .roles span{font-size:10.5px;font-weight:700;border:1px solid var(--ink);padding:1px 8px;border-radius:999px}
+.status{position:absolute;top:10px;left:10px;z-index:2;background:var(--paper);color:var(--ink);border:1.5px solid var(--ink);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:999px}
+/* visual 1: brand board */
+.v-brand{background:#7d1d1d;display:grid;grid-template-columns:1.3fr 1fr;gap:10px;padding:14% 7% 7%}
+.v-brand .mark{background:#f5e7c8;display:grid;place-items:center;text-align:center;color:#7d1d1d;padding:8px}
+.v-brand .mark b{font-family:var(--script);font-weight:400;font-size:clamp(30px,4vw,44px);line-height:1}
+.v-brand .mark small{display:block;font-size:9px;font-weight:800;letter-spacing:.2em;margin-top:4px}
+.v-brand .sw{display:grid;grid-template-rows:repeat(4,1fr);gap:6px}
+.v-brand .sw i{display:block;border:1px solid rgba(255,255,255,.35)}
+/* visual 2: browser mock */
+.v-web{background:var(--blue);padding:9% 8% 0}
+.v-web .win{background:var(--paper);height:100%;border:1.5px solid var(--ink);border-bottom:0;display:grid;grid-template-rows:auto 1fr}
+.v-web .bar{display:flex;gap:4px;padding:6px 8px;border-bottom:1.5px solid var(--ink)}
+.v-web .bar i{width:7px;height:7px;border-radius:50%;background:var(--ink);opacity:.5}
+.v-web .pg{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px}
+.v-web .pg .t{grid-column:span 2;font-family:var(--script);font-size:clamp(20px,2.6vw,28px);color:var(--ink);line-height:1}
+.v-web .pg i{display:block;aspect-ratio:4/3;background:var(--green)}
+.v-web .pg i+i{background:var(--orange)}
+/* visual 3: film strip */
+.v-film{background:var(--ink);display:flex;align-items:center;gap:6px;padding:0 6%}
+.v-film::before,.v-film::after{content:"";position:absolute;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,transparent 0 8px,var(--paper) 8px 14px);opacity:.55}
+.v-film::before{top:8px}.v-film::after{bottom:8px}
+.v-film i{flex:1;aspect-ratio:3/4;display:block}
+/* visual 4/5: simple layouts */
+.v-care{background:var(--green);display:grid;place-items:center}
+.v-care span{font-family:var(--display);font-size:clamp(28px,4vw,40px);color:var(--ink);background:var(--paper);border:1.5px solid var(--ink);padding:4px 14px;transform:rotate(-3deg)}
+.v-shop{background:var(--pink);display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12% 8%}
+.v-shop i{display:block;background:var(--paper);border:1.5px solid var(--ink);position:relative}
+.v-shop i::after{content:"";position:absolute;left:18%;right:18%;bottom:14%;height:30%;background:var(--orange);border-radius:8px 8px 2px 2px}
+.v-glu{background:var(--orange);display:grid;place-items:center}
+.v-glu svg{width:60%;height:auto}
+@media (max-width:860px){.cp{grid-template-columns:repeat(2,minmax(0,1fr))}.proj,.proj.big{grid-column:span 1}}
+@media (max-width:560px){.cp{grid-template-columns:1fr}.ai{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.contact .display{font-size:clamp(46px,8vw,96px)}
+.contact .script{font-size:clamp(40px,6vw,64px);display:block;margin-bottom:-12px;transform:rotate(-4deg)}
+.cinfo{display:grid;gap:10px}
+.cinfo div{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.cinfo .k{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;width:72px}
+.cinfo .v{font-weight:700;user-select:all;word-break:break-all}
+.copy{font:inherit;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:none;border:1.5px solid var(--ink);color:var(--ink);padding:2px 8px;cursor:pointer}
+.copy:hover{background:var(--ink);color:var(--paper)}
+footer{text-align:center;font-size:12px;color:var(--muted)}
+
+@media (max-width:860px){
+  .hero,.split,.case,.contact{grid-template-columns:1fr}
+  .perf{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wide{grid-column:span 2}
+}
+@media (max-width:560px){
+  .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about{grid-template-columns:1fr}
+  .about .tile{aspect-ratio:16/7}
+  .job{grid-template-columns:1fr;gap:4px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .folder{transition:transform .25s ease}
+  .portrait:hover .f1{transform:translate(-4px,-4px) rotate(-4deg)}
+  .portrait:hover .f2{transform:translate(4px,-4px) rotate(4deg)}
+  .portrait:hover .f3{transform:translate(-4px,4px) rotate(3deg)}
+  .portrait:hover .f4{transform:translate(4px,4px) rotate(-3deg)}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="folder" viewBox="0 0 100 80"><path d="M4 14 a6 6 0 0 1 6-6 h24 l8 8 h48 a6 6 0 0 1 6 6 v48 a6 6 0 0 1 -6 6 H10 a6 6 0 0 1 -6-6z" fill="currentColor"/><path d="M4 26 h92 v44 a6 6 0 0 1-6 6 H10 a6 6 0 0 1-6-6z" fill="currentColor" opacity=".75"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section class="sheet" id="top">
+  <nav>
+    <a href="#top" style="font-size:14px">Pham Thi My Duyen</a>
+    <div class="links">
+      <a href="#work">My work</a>
+      <a href="#cases">Case study</a>
+      <a href="#results">Results</a>
+      <a href="#creative">Creative</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <div class="hero">
+    <div>
+      <div class="hero-title">
+        <span class="script">Marketing</span>
+        <h1 class="display">Portfolio</h1>
+      </div>
+      <p class="lede">Digital marketer with 3+ years across Meta Ads, SEO and data-driven campaign optimization. I turn campaign numbers into clear next steps for growing brands.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Let's connect</a>
+        <a class="btn" href="https://www.linkedin.com/in/myduyen1/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div class="meta-line">
+        <span>Ho Chi Minh City, Vietnam</span><span>Vietnamese · English</span><span>Open to Marketing &amp; Creative roles</span>
+      </div>
+    </div>
+    <div class="portrait" aria-label="Portrait card with campaign folders">
+      <div class="photo"><div class="stripe"></div><span class="mono">MD</span></div>
+      <div class="folder f1" style="color:var(--pink)"><svg viewBox="0 0 100 80"><use href="#folder"/></svg><span>meta_ads_01</span></div>
+      <div class="folder f2" style="color:var(--orange)"><svg viewBox="0 0 100 80"><use href="#folder"/></svg><span>seo_content_02</span></div>
+      <div class="folder f3" style="color:var(--blue)"><svg viewBox="0 0 100 80"><use href="#folder"/></svg><span>email_ab_03</span></div>
+      <div class="folder f4" style="color:var(--green)"><svg viewBox="0 0 100 80"><use href="#folder"/></svg><span>brand_launch_04</span></div>
+      <div class="nameplate">PHAM THI MY DUYEN · MELY</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT + WORK -->
+<div class="split" id="work">
+  <section class="sheet about">
+    <div class="tile" aria-hidden="true"></div>
+    <div>
+      <h2 class="script">Hi, I'm Mely!</h2>
+      <p style="margin-top:10px"><strong>Advertising consultant</strong> who helped 100+ Vietnamese SMEs each month plan and optimize their Meta Ads, from first campaign to scaling what works.</p>
+      <p>I work best where <strong>data, creative and people</strong> meet: reading ROAS, CTR and CPA, testing creatives, and explaining results so clients know exactly what to do next.</p>
+      <div class="badges"><span>META</span><span>·</span><span>CONCENTRIX</span><span>·</span><span>KLAVIYO</span><span>·</span><span>GA4</span><span>·</span><span>FPT UNIVERSITY</span></div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <h2 class="display sec-title">My work includes</h2>
+    <div class="svc">
+      <article><div class="ico c-blue"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l14-6v14L3 13z"/><path d="M7 13v5h3"/></svg></div><h3>Meta Ads</h3><p>Campaign structure, audiences and budget plans built around each client's goal.</p></article>
+      <article><div class="ico c-pink"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Performance analysis</h3><p>ROAS, CTR, CPC, CPM and conversion rate turned into optimization actions.</p></article>
+      <article><div class="ico c-orange"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4"/></svg></div><h3>SEO &amp; content</h3><p>Keyword research and website content that grows organic traffic.</p></article>
+      <article><div class="ico c-green"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></svg></div><h3>Email automation</h3><p>Klaviyo flows and A/B tests on subject lines and creatives.</p></article>
+      <article><div class="ico c-paper"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><h3>AI-assisted research</h3><p>Market research, copy drafts and data analysis sped up with Claude and ChatGPT.</p></article>
+      <article><div class="ico c-blue"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8l8-5 8 5v10l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v10"/></svg></div><h3>Brand &amp; packaging</h3><p>Product launch support from supplier checks to packaging design.</p></article>
+    </div>
+  </section>
+</div>
+
+<!-- CASE STUDIES -->
+<section class="sheet cases" id="cases">
+  <h2 class="display sec-title" style="margin-bottom:0">Case studies</h2>
+
+  <article class="case">
+    <div>
+      <span class="pill">Case study 01</span>
+      <div class="case-head">
+        <span class="script">Performance</span>
+        <h3 class="display">Meta Ads Consulting</h3>
+        <div class="client">Concentrix × Meta</div>
+        <div class="tags">Advertising Consultant · Dec 2025 – Jun 2026</div>
+      </div>
+      <div class="board" aria-hidden="true">
+        <div class="c-blue">ROAS</div><div class="c-paper">CTR</div><div class="c-pink">CPA</div>
+        <div class="c-paper">CPM</div><div class="c-orange">CVR</div><div class="c-paper">CPC</div>
+      </div>
+    </div>
+    <div class="cbody">
+      <div><h4>The challenge</h4><p>Vietnamese SMEs running Meta Ads with unclear goals, uneven spend and little reading of their own data.</p></div>
+      <div><h4>The approach</h4>
+        <ul>
+          <li>Consulted 100+ businesses every month, matching campaign strategy to each business goal.</li>
+          <li>Audited ROAS, CTR, CPC, CPM and conversion rate to find the biggest optimization gaps.</li>
+          <li>Recommended tailored changes to audiences, budgets and creatives, then followed up on results.</li>
+        </ul>
+      </div>
+      <div class="steps"><div>Diagnose</div><div>Plan</div><div>Optimize</div><div>Review</div></div>
+      <div><h4>Result</h4>
+        <div class="result">
+          <div><b>100+</b><small>SMEs / month</small></div>
+          <div><b>+100–130%</b><small>Conversions &amp; revenue</small></div>
+          <div><b>Top</b><small>Outbound sales Q1 2026</small></div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div>
+      <span class="pill">Case study 02</span>
+      <div class="case-head">
+        <span class="script">E-commerce</span>
+        <h3 class="display">2× Sales Growth</h3>
+        <div class="client">Kha Kim</div>
+        <div class="tags">Digital Marketing Executive · Oct 2021 – May 2022</div>
+      </div>
+      <div class="board" aria-hidden="true">
+        <div class="c-pink">2×</div><div class="c-paper">A / B</div><div class="c-green">Email</div>
+        <div class="c-paper">Ads</div><div class="c-blue">+25%</div><div class="c-paper">+15%</div>
+      </div>
+    </div>
+    <div class="cbody">
+      <div><h4>The challenge</h4><p>Grow online sales with paid social and email while keeping ad spend efficient.</p></div>
+      <div><h4>The approach</h4>
+        <ul>
+          <li>Optimized Meta Ads audiences and campaign setup based on ROAS, CPC and CPM.</li>
+          <li>Refreshed ad creatives using performance data.</li>
+          <li>Built Klaviyo email automations and A/B tested subject lines and content.</li>
+        </ul>
+      </div>
+      <div class="steps"><div>Audience</div><div>Creative</div><div>Email</div><div>Test</div></div>
+      <div><h4>Result</h4>
+        <div class="result">
+          <div><b>2×</b><small>Sales</small></div>
+          <div><b>+25%</b><small>Email open rate</small></div>
+          <div><b>+15%</b><small>Email CTR</small></div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div>
+      <span class="pill">Case study 03</span>
+      <div class="case-head">
+        <span class="script">Brand launch</span>
+        <h3 class="display">NutCircle Cashew</h3>
+        <div class="client">Thế Dương</div>
+        <div class="tags">Digital Marketing Executive · Feb – Apr 2024</div>
+      </div>
+      <div class="board" aria-hidden="true">
+        <div class="c-orange">Research</div><div class="c-paper">SEO</div><div class="c-green">Pack</div>
+        <div class="c-paper">Web</div><div class="c-blue">Launch</div><div class="c-paper">Bình Phước</div>
+      </div>
+    </div>
+    <div class="cbody">
+      <div><h4>The challenge</h4><p>Position a new cashew brand and get its first product to market with an online presence from day one.</p></div>
+      <div><h4>The approach</h4>
+        <ul>
+          <li>Ran market research to shape brand positioning and market-entry strategy.</li>
+          <li>Built the company website with SEO-driven content.</li>
+          <li>Supported the first launch through supplier evaluation, factory visits and packaging development.</li>
+        </ul>
+      </div>
+      <div class="steps"><div>Research</div><div>Position</div><div>Build</div><div>Launch</div></div>
+      <div><h4>Result</h4>
+        <div class="result">
+          <div><b>+25%</b><small>Traffic, South VN</small></div>
+          <div><b>+10%</b><small>Traffic, nationwide</small></div>
+          <div><b>1st</b><small>Product launched</small></div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- RESULTS -->
+<section class="sheet" id="results">
+  <h2 class="display sec-title">Campaign performance</h2>
+  <div class="perf">
+    <div class="panel stat"><div class="ph">Clients advised</div><div class="pb"><b>100+</b><p>SMEs consulted each month on Meta Ads</p></div></div>
+    <div class="panel stat"><div class="ph">Experience</div><div class="pb"><b>3+ yrs</b><p>Digital marketing &amp; client-facing roles</p></div></div>
+    <div class="panel stat"><div class="ph">Client satisfaction</div><div class="pb"><b>90.23%</b><p>CSAT, Best CSAT Agent award</p></div></div>
+    <div class="panel stat"><div class="ph">Thesis</div><div class="pb"><b>9.5/10</b><p>Top-ranked business plan, FPT University</p></div></div>
+
+    <div class="panel wide">
+      <div class="ph">Growth delivered by campaign (%)</div>
+      <div class="pb chart-box">
+        <svg viewBox="0 0 640 250" role="img" aria-label="Bar chart of growth results: up to 130% conversions and revenue, 100% sales, 25% SEO traffic South Vietnam, 25% email open rate, 15% email CTR, 10% traffic nationwide">
+          <g font-family="Manrope,system-ui,sans-serif" font-size="11" fill="var(--muted)">
+            <!-- scale: 0..140% -> x 190..610 (3px per %) -->
+            <g stroke="var(--line)" stroke-width="1">
+              <line x1="190" y1="10" x2="190" y2="214"/><line x1="280" y1="10" x2="280" y2="214"/><line x1="370" y1="10" x2="370" y2="214"/><line x1="460" y1="10" x2="460" y2="214"/><line x1="550" y1="10" x2="550" y2="214"/>
+            </g>
+            <text x="190" y="232" text-anchor="middle">0</text><text x="280" y="232" text-anchor="middle">30</text><text x="370" y="232" text-anchor="middle">60</text><text x="460" y="232" text-anchor="middle">90</text><text x="550" y="232" text-anchor="middle">120</text>
+          </g>
+          <g font-family="Manrope,system-ui,sans-serif" font-size="12" font-weight="700" fill="var(--ink)">
+            <text x="180" y="31" text-anchor="end">Conversions &amp; revenue</text>
+            <text x="180" y="65" text-anchor="end">Sales (Kha Kim)</text>
+            <text x="180" y="99" text-anchor="end">SEO traffic, South VN</text>
+            <text x="180" y="133" text-anchor="end">Email open rate</text>
+            <text x="180" y="167" text-anchor="end">Email CTR</text>
+            <text x="180" y="201" text-anchor="end">Traffic, nationwide</text>
+          </g>
+          <rect x="190" y="18" width="300" height="20" fill="var(--blue)" stroke="var(--ink)" stroke-width="1.2"/>
+          <rect x="490" y="18" width="90" height="20" fill="var(--blue)" opacity=".45" stroke="var(--ink)" stroke-width="1.2" stroke-dasharray="3 2"/>
+          <rect x="190" y="52" width="300" height="20" fill="var(--pink)" stroke="var(--ink)" stroke-width="1.2"/>
+          <rect x="190" y="86" width="75" height="20" fill="var(--orange)" stroke="var(--ink)" stroke-width="1.2"/>
+          <rect x="190" y="120" width="75" height="20" fill="var(--green)" stroke="var(--ink)" stroke-width="1.2"/>
+          <rect x="190" y="154" width="45" height="20" fill="var(--green)" stroke="var(--ink)" stroke-width="1.2"/>
+          <rect x="190" y="188" width="30" height="20" fill="var(--orange)" stroke="var(--ink)" stroke-width="1.2"/>
+          <g font-family="Anton,Impact,sans-serif" font-size="15" fill="var(--ink)">
+            <text x="588" y="33">100–130%</text>
+            <text x="498" y="67">+100% (2×)</text>
+            <text x="273" y="101">+25%</text>
+            <text x="273" y="135">+25%</text>
+            <text x="243" y="169">+15%</text>
+            <text x="228" y="203">+10%</text>
+          </g>
+        </svg>
+      </div>
+      <p class="chart-note" style="padding:0 16px 14px">Figures as reported in each role. The first bar shows the range of client growth achieved at Concentrix.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CREATIVE PROJECTS -->
+<section class="sheet" id="creative">
+  <div class="cp-head">
+    <div>
+      <span class="script" style="font-size:44px;display:block;margin-bottom:-10px">Additional</span>
+      <h2 class="display sec-title">Creative projects</h2>
+    </div>
+    <p>Brand, web and visual work where I owned the look as well as the message.</p>
+  </div>
+  <div class="cp">
+
+    <article class="proj big">
+      <div class="vis v-brand" aria-hidden="true">
+        <span class="status">In progress · 2026</span>
+        <div class="mark"><div><b>Đức Thành</b><small>HẠT ĐIỀU BÌNH PHƯỚC</small></div></div>
+        <div class="sw"><i style="background:#7d1d1d"></i><i style="background:#c8962e"></i><i style="background:#f5e7c8"></i><i style="background:#3f2a1a"></i></div>
+      </div>
+      <div class="txt">
+        <span class="kind">Brand identity · Packaging</span>
+        <h3>Đức Thành Tết Cashew</h3>
+        <p>Family brand for roasted Bình Phước cashew gift boxes, launching for Tết 2027 in Đồng Xoài and nationwide. I'm building the identity myself: a warm, traditional Tết-gift look across logo, label, gift box and social content.</p>
+        <div class="roles"><span>Brand identity</span><span>Label &amp; box</span><span>Social content</span></div>
+      </div>
+    </article>
+
+    <article class="proj big">
+      <div class="vis v-web" aria-hidden="true">
+        <div class="win"><div class="bar"><i></i><i></i><i></i></div>
+          <div class="pg"><span class="t">Mely đi đây đó</span><i></i><i></i></div>
+        </div>
+      </div>
+      <div class="txt">
+        <span class="kind">Web design · Content</span>
+        <h3>Mely đi đây đó</h3>
+        <p>Personal travel website about places I've visited in Vietnam and Malaysia. I designed the layout, wrote the stories and shot the photos.</p>
+        <div class="roles"><span>Web layout</span><span>Writing</span><span>Photography</span></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="vis v-film" aria-hidden="true"><i style="background:var(--orange)"></i><i style="background:var(--blue)"></i><i style="background:var(--green)"></i><i style="background:var(--pink)"></i></div>
+      <div class="txt">
+        <span class="kind">Photography · Social</span>
+        <h3>Film &amp; daily life</h3>
+        <p>Film photography and slow-living, daily-moment content with a vintage aesthetic, planned for Instagram and TikTok.</p>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="vis v-care" aria-hidden="true"><span>noinghe.com</span></div>
+      <div class="txt">
+        <span class="kind">Non-profit website · 2023–2024</span>
+        <h3>Nơi Nghe</h3>
+        <p>Wrote website content and worked with the IT team to build a platform sharing mental health resources with the community.</p>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="vis v-shop" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="txt">
+        <span class="kind">E-commerce · Team lead · 2023</span>
+        <h3>T-Décor</h3>
+        <p>Led a 5-person team to build a furniture e-commerce site, with keyword research and SEO for organic visibility.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE + TOOLKIT -->
+<div class="split">
+  <section class="sheet">
+    <h2 class="display sec-title">Experience</h2>
+    <div class="timeline">
+      <div class="job"><div class="when">Dec 2025 – Jun 2026</div><div><h3>Advertising Consultant (Meta)</h3><div class="where">Concentrix · Kuala Lumpur</div><ul><li>Consulted 100+ SMEs monthly on data-driven Meta Ads strategy</li><li>Helped clients grow conversions and revenue by 100–130%</li></ul></div></div>
+      <div class="job"><div class="when">Jun 2024 – Dec 2025</div><div><h3>Customer Service (Meta)</h3><div class="where">Concentrix · Kuala Lumpur</div><ul><li>90.23% CSAT; promoted to Advertising Consultant</li></ul></div></div>
+      <div class="job"><div class="when">Feb – Apr 2024</div><div><h3>Digital Marketing Executive</h3><div class="where">Thế Dương · Ho Chi Minh City</div><ul><li>NutCircle positioning, SEO website, first product launch</li></ul></div></div>
+      <div class="job"><div class="when">Oct 2021 – May 2022</div><div><h3>Digital Marketing Executive</h3><div class="where">Kha Kim · Ho Chi Minh City</div><ul><li>2× sales via Meta Ads; Klaviyo email automation</li></ul></div></div>
+    </div>
+  </section>
+
+  <section class="sheet tk">
+    <div>
+      <span class="script" style="font-size:44px;display:block;margin-bottom:-10px">Creator</span>
+      <h2 class="display sec-title">Toolkit</h2>
+      <div class="chips"><span>Meta Ads Manager</span><span>GA4</span><span>Search Console</span><span>Ahrefs</span><span>SEMrush</span><span>Klaviyo</span><span>Canva</span><span>Photoshop</span><span>Excel</span></div>
+    </div>
+    <div>
+      <div class="label" style="margin-bottom:10px">AI tools</div>
+      <div class="ai">
+        <div><b>Claude</b><p>Data analysis, research synthesis, long-form writing and building web pages</p></div>
+        <div><b>ChatGPT</b><p>Ad copy variations, content ideas, hooks and quick brainstorming</p></div>
+      </div>
+    </div>
+    <div>
+      <div class="label" style="margin-bottom:10px">Certificates</div>
+      <div class="chips soft"><span>Advanced Facebook Advertising · 2025</span><span>AI &amp; Digital Marketing Trends · 2026</span><span>Hands-On Data Analysis with Claude · 2026</span><span>Business Analytics: Marketing Data · 2022</span></div>
+    </div>
+    <div>
+      <div class="label" style="margin-bottom:10px">Awards</div>
+      <ul class="list">
+        <li>Top Outbound Sales Performer, Concentrix Malaysia (Q1 2026)</li>
+        <li>Best Customer Satisfaction Agent, Concentrix Malaysia (Dec 2024)</li>
+        <li>Best Average Handling Time Performance, Concentrix Malaysia (Jan 2025)</li>
+        <li>Top-ranked Graduation Thesis, FPT University (9.5/10)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="label" style="margin-bottom:10px">Education</div>
+      <p style="font-size:14px"><strong>B.A. Business Administration, Digital Marketing</strong><br><span style="color:var(--muted)">FPT University · 2021 – 2024 · GPA 7.58/10</span></p>
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT -->
+<section class="sheet contact" id="contact">
+  <div>
+    <span class="script">Let's work</span>
+    <h2 class="display">Together</h2>
+  </div>
+  <div class="cinfo">
+    <div><span class="k">Email</span><span class="v" id="em">phamduyen132001@gmail.com</span><button class="copy" type="button" id="copy-em" data-target="em">Copy</button></div>
+    <div><span class="k">Phone</span><span class="v" id="ph">+84 933 348 395</span><button class="copy" type="button" id="copy-ph" data-target="ph">Copy</button></div>
+    <div><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/myduyen1/" target="_blank" rel="noopener">linkedin.com/in/myduyen1</a></div>
+  </div>
+</section>
+
+<footer>© 2026 Pham Thi My Duyen · Ho Chi Minh City</footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.target), t=el.textContent;
+    function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)}
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'}
+    try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+  });
+});
+</script>
+</body>
+</html>
